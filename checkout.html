@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+</head>
+<body>
+    <header>
+         <a href="./index.html"><img src="./vecteezy_amazon-logo-png-amazon-icon-transparent-png_19766240.png" alt="amazon" width="200"></a>
+         <div class="checkout">
+            <span>Checkout</span>
+            (<p>3 items</p>)
+         </div>
+         <ion-icon name="lock-closed"></ion-icon>
+    </header>
+    <div class="orders">
+        <h2>Review your order</h2>
+        <div class="order-container">
+            <div class="order-review-lists">
+            </div>
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-summary-details">
+                    <div class="order-summary-details-shiptotal">
+                        <div class="order-summary-details-items">
+                        <span>Items (3):</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="order-summary-details-shipping-handling">
+                        <span>Shipping & handling:</span>
+                        <span>$0.00</span>
+                    </div>
+                    </div>
+                    <div class="order-summary-taxtotal">
+                        <div class="order-summary-details-tax">
+                        <span>Total before tax:</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="order-summary-details-estimated-tax">
+                        <span>Estimated tax (10%):</span>
+                        <span>$0.00</span>
+                    </div>
+                    </div>
+                    <div class="order-summary-total">
+                        <span>Order total:</span>
+                        <span>$0.00</span>
+                    </div>
+                    <label class="order-summary-paypal">
+                        Use Paypal
+                        <input type="checkbox">
+                    </label>
+                    <button>Place your order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>

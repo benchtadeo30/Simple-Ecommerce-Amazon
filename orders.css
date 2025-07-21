@@ -1,0 +1,620 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto";
+    overflow: auto;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    padding: 15px 30px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: rgb(52, 52, 52);
+}
+
+header img{
+    vertical-align: middle;
+}
+
+header .logo h1{
+    color: rgb(255, 189, 35);
+}
+
+header .logo span{
+    font-size: 25px;
+}
+
+header .search-input{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border-radius: 6px;
+    overflow: auto;
+    border: none;
+}
+
+header .search-input:focus-within{
+    outline: 2px solid rgb(255, 192, 114);
+}
+
+header .search-input input{
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+header .search-input input:focus{
+    outline: none;
+}
+
+header .search-input span{
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(31, 31, 31);
+    background-color: rgb(255, 192, 114);
+    
+}
+
+header .orders{
+    font-size: 20px;
+}
+header .orders span{
+    font-weight: 700;
+}
+
+header .cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+header .cart span:nth-child(1){
+    font-size: 50px;
+    color: rgb(223, 223, 223);
+}
+
+header .cart span:nth-child(2){
+    background-color: rgb(255, 195, 64);
+    font-weight: 600;
+    position: absolute;
+    bottom: -2px;
+    right: -5px;
+    align-self: flex-end;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.orders-product{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 1500px;
+    margin: 20px auto;
+}
+
+.orders-product h1{
+    font-size: 40px;
+}
+
+.orders-product .orders-container{
+    width: 100%;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.orders-product .orders-container .order-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: rgb(239, 239, 239);
+}
+
+.orders-product .orders-container .order-heading .order-date-price{
+    display: flex;
+    gap: 100px;
+}
+
+.orders-product .orders-container .order-heading .order-date-price .order-price h4, .orders-product .orders-container .order-heading .order-date-price .order-date h4{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.orders-product .orders-container .order-heading .order-date-price .order-price span, .orders-product .orders-container .order-heading .order-date-price .order-date span{
+    font-size: 22px;
+}
+
+.orders-product .orders-container .order-heading .order-id{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.orders-product .orders-container .order-heading .order-id h4{
+      font-size: 25px;
+    font-weight: 500;
+}
+
+.orders-product .orders-container .order-heading .order-id span{
+     font-size: 22px;
+}
+
+.orders-product .orders-container .orders-contents{
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-product .orders-container .orders-contents .order-product{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details h3{
+font-size: 24px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details p{
+    font-size: 20px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details span{
+    font-size: 20px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button{
+    font-size: 20px;
+    border: none;
+    background-color: rgb(255, 189, 35);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button:hover{
+    background-color: rgb(237, 176, 32);
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button span{
+    font-size: 25px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-track-package{
+    width: 30%;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-track-package button{
+    padding: 10px;
+    width: 100%;
+    background:none;
+    font-size: 24px;
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 0 0 3px rgb(209, 209, 209);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-track-package button:hover{
+    background-color: rgb(232, 232, 232);
+}
+
+@media screen and (max-width: 1854px) {
+       header img{
+   width: 100px;
+}
+
+header .logo span{
+    font-size: 50px;
+}
+
+header .search-input{
+    width: 70%;
+}
+
+header .search-input input{
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: none;
+    padding-right: 10px;
+}
+header .search-input span{
+    font-size: 20px;
+    padding: 8px;
+    
+}
+
+header .orders{
+    font-size: 16px;
+}
+
+header .cart span:nth-child(1){
+    font-size: 40px;
+}
+
+header .cart span:nth-child(2){
+    font-size: 12px;
+}
+}
+
+@media screen and (max-width: 1540px) {
+    .orders-product{
+    width: 1000px;
+}
+.orders-product h1{
+    font-size: 30px;
+}
+
+.orders-product .orders-container .order-heading{
+    padding: 20px;
+}
+
+.orders-product .orders-container .order-heading .order-date-price .order-price h4, .orders-product .orders-container .order-heading .order-date-price .order-date h4{
+    font-size: 20px;
+}
+.orders-product .orders-container .order-heading .order-date-price .order-price span, .orders-product .orders-container .order-heading .order-date-price .order-date span{
+    font-size: 17px;
+}
+
+.orders-product .orders-container .order-heading .order-id h4{
+      font-size: 20px;
+}
+
+.orders-product .orders-container .order-heading .order-id span{
+     font-size: 17px;
+}
+.orders-product .orders-container .orders-contents .order-product{
+    padding: 20px;
+}
+
+
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-image img{
+    width: 120px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details h3{
+font-size: 19px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details{
+    width:60%;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details p{
+    font-size: 15px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details span{
+    font-size: 15px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button{
+    font-size: 15px;
+    padding: 8px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button span{
+    font-size: 16px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-track-package button{
+    padding: 6px;
+    width: 100%;
+    background:none;
+    font-size: 19px;
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 0 0 3px rgb(209, 209, 209);
+    border-radius: 10px;
+    cursor: pointer;
+}
+}
+
+@media screen and (max-width: 1045px) {
+    header{
+        justify-content: center;
+        gap: 20px;
+    }
+       header img{
+   width: 80px;
+}
+
+header .search-input{
+    width: 60%;
+}
+
+header .search-input input{
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 12px;
+    border: none;
+    padding-right: 10px;
+}
+header .search-input span{
+    font-size: 16px;
+    padding: 6px;
+    
+}
+
+header .orders{
+    font-size: 12px;
+}
+
+header .cart span:nth-child(1){
+    font-size: 30px;
+}
+
+header .cart span:nth-child(2){
+    font-size: 10px;
+    padding: 3px 7px;
+}
+
+ .orders-product{
+    width: 500px;
+}
+.orders-product h1{
+    font-size: 20px;
+}
+
+.orders-product .orders-container .order-heading{
+    padding: 15px;
+}
+
+.orders-product .orders-container .order-heading .order-date-price{
+    gap: 20px;
+}
+
+.orders-product .orders-container .order-heading .order-date-price .order-price h4, .orders-product .orders-container .order-heading .order-date-price .order-date h4{
+    font-size: 15px;
+}
+.orders-product .orders-container .order-heading .order-date-price .order-price span, .orders-product .orders-container .order-heading .order-date-price .order-date span{
+    font-size: 12px;
+}
+
+.orders-product .orders-container .order-heading .order-id h4{
+      font-size: 15px;
+}
+
+.orders-product .orders-container .order-heading .order-id span{
+     font-size: 12px;
+}
+.orders-product .orders-container .orders-contents .order-product{
+    padding: 10px;
+}
+
+
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-image img{
+    width: 80px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details h3{
+font-size: 14px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details{
+    width:60%;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details p{
+    font-size: 12px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details span{
+    font-size: 12px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button{
+    font-size: 12px;
+    padding: 6px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button span{
+    font-size: 14px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-track-package button{
+    padding: 6px;
+    width: 100%;
+    background:none;
+    font-size: 10px;
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 0 0 3px rgb(209, 209, 209);
+    border-radius: 10px;
+    cursor: pointer;
+}
+}
+
+@media screen and (max-width: 603px){
+       header img{
+   width: 60px;
+}
+
+header .search-input{
+    width: 40%;
+}
+
+header .search-input input{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 10px;
+    border: none;
+    padding-right: 10px;
+}
+header .search-input span{
+    font-size: 14px;
+    padding: 6px;
+    
+}
+
+header .orders{
+    font-size: 9px;
+}
+
+header .cart span:nth-child(1){
+    font-size: 24px;
+}
+
+header .cart span:nth-child(2){
+    font-size: 8px;
+    padding: 3px 6px;
+}
+
+ .orders-product{
+    width: 300px;
+}
+.orders-product h1{
+    font-size: 15px;
+}
+
+.orders-product .orders-container .order-heading{
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.orders-product .orders-container .order-heading .order-date-price{
+    gap: 10px;
+    align-items: center;
+}
+
+.orders-product .orders-container .order-heading .order-date-price .order-date, .orders-product .orders-container .order-heading .order-date-price .order-price{
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-product .orders-container .order-heading .order-date-price .order-price h4, .orders-product .orders-container .order-heading .order-date-price .order-date h4{
+    font-size: 10px;
+}
+.orders-product .orders-container .order-heading .order-date-price .order-price span, .orders-product .orders-container .order-heading .order-date-price .order-date span{
+    font-size: 8px;
+}
+
+.orders-product .orders-container .order-heading .order-id h4{
+      font-size: 10px;
+}
+
+.orders-product .orders-container .order-heading .order-id span{
+     font-size: 8px;
+}
+.orders-product .orders-container .orders-contents .order-product{
+    padding: 10px;
+}
+
+
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-image img{
+    width: 60px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details h3{
+font-size: 8px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details{
+    width:60%;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details p{
+    font-size: 8px;
+}
+
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details span{
+    font-size: 8px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button{
+    font-size: 8px;
+    padding: 6px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-product-description .order-product-details button span{
+    font-size: 10px;
+}
+.orders-product .orders-container .orders-contents .order-product .order-track-package button{
+    padding: 5px;
+    width: 100%;
+    background:none;
+    font-size: 7px;
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 0 0 3px rgb(209, 209, 209);
+    border-radius: 10px;
+    cursor: pointer;
+}
+}
+
+@media screen and (max-width: 360px){
+header{
+    gap: 15px;
+}
+.orders-product{
+    gap: 5px;
+}
+
+.orders-product h1{
+    font-size: 13px;
+}
+       header img{
+   width: 50px;
+}
+
+header .search-input{
+    width: 50%;
+}
+
+header .search-input input{
+    width: 100%;
+    padding: 2px 10px;
+    font-size: 8px;
+    border: none;
+    padding-right: 6px;
+}
+header .search-input span{
+    font-size: 6px;
+    padding: 5px;
+    
+}
+
+header .orders{
+    font-size: 7px;
+}
+
+header .cart span:nth-child(1){
+    font-size: 18px;
+}
+
+header .cart span:nth-child(2){
+    font-size: 4px;
+    padding: 3px 5px;
+}
+
+}
