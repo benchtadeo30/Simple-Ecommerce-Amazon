@@ -6,10 +6,11 @@ const orderHeading = document.querySelector('.orders-product .orders-container .
 const currentProductDateOrdered = localStorage.getItem('currentProductDateOrdered')
 const cartCount = localStorage.getItem('cartCount')
 
-function displayAllProducts(){
+function displayAllProducts(filteredProducts = []){
+    const isProductsEmpty = filteredProducts.length > 0 ? filteredProducts : orderedProductss.orderedProducts
     orderLists.innerHTML = ""
 
-    orderedProductss.orderedProducts.forEach(orderedProduct => {
+    isProductsEmpty.forEach(orderedProduct => {
         orderLists.innerHTML += `
          <div class="order-product" data-id=${orderedProduct.id}>
             <div class="order-product-description">
@@ -77,4 +78,10 @@ orderLists.addEventListener('click', e => {
 
        window.location.href = `./tracking.html?orderId=${orderedProductss.orderId}&productId=${id}`
     }
+})
+
+document.querySelector('header .search-input input').addEventListener('input', e => {
+    const searchProduct = e.target.value.trim()
+    const filteredProducts = orderedProductss.orderedProducts.filter(product => product.name.toLowerCase().includes(searchProduct))
+    displayAllProducts(filteredProducts)
 })
