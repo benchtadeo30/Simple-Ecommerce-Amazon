@@ -83,5 +83,6 @@ orderLists.addEventListener('click', e => {
 document.querySelector('header .search-input input').addEventListener('input', e => {
     const searchProduct = e.target.value.trim()
     const filteredProducts = orderedProductss.orderedProducts.filter(product => product.name.toLowerCase().includes(searchProduct))
+    console.log(filteredProducts)
     displayAllProducts(filteredProducts)
 })
